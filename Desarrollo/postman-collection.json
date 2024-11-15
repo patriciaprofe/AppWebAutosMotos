@@ -1,0 +1,220 @@
+{
+  "info": {
+    "_postman_id": "b67fcad6-33fe-44ec-9b16-cedc0e106319",
+    "name": "Vehiculos API",
+    "description": "Colección de pruebas para la API de vehículos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Buscar productos",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/productos/buscar?query={{query}}",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "productos",
+            "buscar"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "auto"
+            }
+          ]
+        },
+        "method": "GET",
+        "description": "Búsqueda de productos por texto aproximado",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      "response": []
+    },
+    {
+      "name": "Crear producto",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/productos",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "productos"
+          ]
+        },
+        "method": "POST",
+        "description": "Crear un nuevo producto",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"Auto de prueba\",\n    \"id_producto_tipo\": 1,\n    \"id_modelo\": 2,\n    \"id_producto_estado\": 1,\n    \"id_usuario\": 1,\n    \"id_usuario_carga\": 1,\n    \"ubicacion_latitud\": 40.7128,\n    \"ubicacion_longitud\": -74.0060\n}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar producto",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/productos/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "productos",
+            "1"
+          ]
+        },
+        "method": "PUT",
+        "description": "Actualizar un producto existente",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"Auto actualizado\",\n    \"id_producto_tipo\": 2,\n    \"id_modelo\": 3,\n    \"id_producto_estado\": 2,\n    \"id_usuario\": 1,\n    \"id_usuario_carga\": 1,\n    \"ubicacion_latitud\": 40.7130,\n    \"ubicacion_longitud\": -74.0065\n}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar producto",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/productos/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "productos",
+            "1"
+          ]
+        },
+        "method": "DELETE",
+        "description": "Eliminar un producto por su ID",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener productos",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/productos",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "productos"
+          ]
+        },
+        "method": "GET",
+        "description": "Obtener todos los productos",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener producto por ID",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/productos/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "productos",
+            "1"
+          ]
+        },
+        "method": "GET",
+        "description": "Obtener un producto específico por ID",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener monedas",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/monedas",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "monedas"
+          ]
+        },
+        "method": "GET",
+        "description": "Obtener todas las monedas disponibles",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener tipos de producto",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/producto_tipos",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "producto_tipos"
+          ]
+        },
+        "method": "GET",
+        "description": "Obtener todos los tipos de producto",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      "response": []
+    }
+  ]
+}
